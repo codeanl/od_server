@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: mp
+  datasource:  # 配置数据源信息
+    url:  jdbc:mysql://localhost:3306/outdoor_new?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 12345678
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: localhost
+      port: 6379
+# 阿里云OSS配置
+aliyun:
+  oss:
+    end-point: oss-cn-guangzhou.aliyuncs.com
+    access-key-id: LTAI5tC3KxoeoXNLqoXg8U7v
+    access-key-secret: pd9Ig93UOohaATV234E7KZsRpLOkMI
+    bucket-name: codeanl
+
+
+# 配置MyBatis日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true #开启驼峰命名和下划线命名的自动转换
